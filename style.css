@@ -1,0 +1,224 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display:flex;
+}
+
+header{
+  margin: auto;
+  width:100%;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows:0px 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "logo2 logo2 logo2 logo2"
+    "logo artistas merch quienes_somos"; 
+}
+
+main{
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "info foto"
+    "info foto"
+    "descubrelo foto"; 
+}
+
+main div a{
+  color: white;
+}
+.logo { 
+  grid-area: logo;
+  width: 50%;
+  visibility: visible;
+}
+
+.logo2 { 
+  grid-area: logo2;
+  visibility: hidden;
+}
+
+header div a {
+  font-size: 150%;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 2% 0%;
+}
+
+header div a:hover{
+  background-color: #e10e0e;
+
+}
+
+header div ul{
+  visibility: hidden;
+}
+
+header div:hover>ul{
+  visibility: visible;
+}
+
+.info{ 
+  font-size: 150%;
+  margin-top: 20%; 
+  grid-area: info; 
+  color: white;
+}
+  
+.descubrelo { 
+  grid-area: descubrelo; 
+  color: white;
+  font-size: 200%;
+  background-color:red;
+  border-radius:30px;
+  height: 55px;
+  width: 200px;
+  padding: 10px;
+}
+  
+.footer { 
+  grid-area: footer;
+  
+  text-align: center;
+  color: white;
+}
+  
+.quienes_somos { 
+  grid-area: quienes_somos; 
+  color: white;
+}
+  
+.merch {
+  grid-area: merch; 
+  color: white;
+}
+  
+.artistas { 
+  grid-area: artistas;
+  color: white;
+}
+  
+.foto { 
+  margin-top: 5%; 
+  grid-area: foto; 
+}
+
+
+@media (min-width: 360px) and (max-width: 1000px){
+
+  html { 
+    height: 80%;
+    width: 80%;
+    background-color: black;
+    display:flex;
+  }  
+
+  header{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0px 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "logo logo logo logo"
+      "logo2 artistas merch quienes_somos"; 
+  }
+  
+  main{
+    display: grid; 
+    grid-template-columns: 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "foto"
+      "info"
+      "descubrelo"; 
+  } 
+  
+  main div a{
+    color: white;
+  }
+
+  .logo { 
+    grid-area: logo;
+    visibility: hidden;
+  }
+
+  .logo2 { 
+    grid-area: logo2;
+    width: auto;
+    visibility: visible;
+  }
+  
+  header div a {
+    font-size: 100%;
+    color: white;
+    display: block;
+    width: 75%;
+    padding: 3% 6%;
+  }
+  
+  header div a:hover{
+    background-color: #e10e0e;
+  
+  }
+  
+  header div ul{
+    visibility: hidden;
+  }
+  
+  header div:hover>ul{
+    visibility: visible;
+  }
+  
+  .info{ 
+    font-size: 110%;
+    margin-top: 10%; 
+    grid-area: info; 
+    color: white;
+  }
+    
+  .descubrelo { 
+    grid-area: descubrelo; 
+    color: white;
+    font-size: 200%;
+    background-color:red;
+    border-radius:30px;
+    height: 55px;
+    width: 200px;
+    padding: 10px;
+  }
+    
+  .footer { 
+    grid-area: footer;
+    text-align: center;
+    color: white;
+  }
+    
+  .quienes_somos { 
+    grid-area: quienes_somos; 
+    color: white;
+  }
+    
+  .merch {
+    grid-area: merch; 
+    color: white;
+  }
+    
+  .artistas { 
+    grid-area: artistas;
+    color: white;
+  }
+    
+  .foto { 
+    grid-area: foto; 
+  }
+}

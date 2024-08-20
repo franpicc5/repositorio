@@ -1,0 +1,153 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo2 logo2 logo2 logo2"
+        "logo artistas merch quienes_somos";
+}
+
+.logo {
+    grid-area: logo;
+    width: 50%;
+    visibility: visible;
+}
+
+.logo2 {
+    grid-area: logo2;
+    visibility: hidden;
+}
+
+header div a {
+    font-size: 150%;
+    color: white;
+}
+
+main {
+    background: url(fotos/fondo.png) center center no-repeat;
+    display: grid;
+    background-size: 130%;
+    gap: 0px 0px
+}
+
+.quienes_somos_info {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+}
+
+.footer {
+    grid-area: footer;
+
+    text-align: center;
+    color: white;
+}
+
+.quienes_somos {
+    grid-area: quienes_somos;
+    color: white;
+}
+
+.merch {
+    grid-area: merch;
+    color: white;
+}
+
+.artistas {
+    grid-area: artistas;
+    color: white;
+}
+
+.foto {
+    margin-top: 5%;
+    grid-area: foto;
+}
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+
+    html {
+        height: 80%;
+        width: 80%;
+        background-color: black;
+        display: flex;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0px 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "logo logo logo logo"
+            "logo2 artistas merch quienes_somos";
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "foto"
+            "info"
+            "descubrelo";
+    }
+
+    main div a {
+        color: white;
+    }
+
+    .logo {
+        grid-area: logo;
+        visibility: hidden;
+    }
+
+    .logo2 {
+        grid-area: logo2;
+        width: auto;
+        visibility: visible;
+    }
+
+    header div a {
+        font-size: 100%;
+        color: white;
+    }
+
+
+    .footer {
+        grid-area: footer;
+        text-align: center;
+        color: white;
+    }
+
+    .quienes_somos {
+        grid-area: quienes_somos;
+        color: white;
+    }
+
+    .merch {
+        grid-area: merch;
+        color: white;
+    }
+
+    .artistas {
+        grid-area: artistas;
+        color: white;
+    }
+
+    .foto {
+        grid-area: foto;
+    }
+}
